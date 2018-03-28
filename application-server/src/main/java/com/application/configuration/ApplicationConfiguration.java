@@ -36,6 +36,7 @@ public class ApplicationConfiguration {
         pgPoolingDataSource.setPassword(password);
         pgPoolingDataSource.setPortNumber(port);
         pgPoolingDataSource.setCurrentSchema(schema);
+        pgPoolingDataSource.setSslMode("require");
         return pgPoolingDataSource;
 
     }
