@@ -23,12 +23,12 @@ public class ApplicationDAO {
 
     public List<ApplicationDTO> getApplications() {
         jdbcTemplate = new JdbcTemplate(dataSource);
-        String selectQuery = "SELECT id, name FROM \"Application\"";
+        String selectQuery = "SELECT \"ID\", \"NAME\" FROM public.\"Application\"";
         return jdbcTemplate.query(selectQuery, new RowMapper<ApplicationDTO>() {
             public ApplicationDTO mapRow(ResultSet resultSet, int i) throws SQLException {
                 ApplicationDTO applicationDTO = new ApplicationDTO();
-                applicationDTO.setId(resultSet.getInt("id"));
-                applicationDTO.setName(resultSet.getString("name"));
+                applicationDTO.setId(resultSet.getInt("ID"));
+                applicationDTO.setName(resultSet.getString("NAME"));
                 return applicationDTO;
             }
         });

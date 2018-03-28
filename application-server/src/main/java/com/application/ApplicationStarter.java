@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class ApplicationStarter extends SpringBootServletInitializer {
+public class ApplicationStarter {
+
     public static void main(String[] args) throws Exception {
        SpringApplication.run(ApplicationStarter.class, args);
     }
