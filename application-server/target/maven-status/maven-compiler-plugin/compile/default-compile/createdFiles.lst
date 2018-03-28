@@ -1,7 +1,0 @@
-com\application\ApplicationStarter.class
-com\application\service\ApplicationService.class
-com\application\dto\ApplicationDTO.class
-com\application\controller\ApplicationRestController.class
-com\application\configuration\ApplicationConfiguration.class
-com\application\jdbc\ApplicationDAO$1.class
-com\application\jdbc\ApplicationDAO.class
