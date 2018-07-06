@@ -2,6 +2,7 @@ package com.application.configuration;
 
 import org.postgresql.ds.PGPoolingDataSource;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -41,5 +42,14 @@ public class ApplicationConfiguration {
 
     }
 
+    @Bean
+    public EmbeddedServletContainerCustomizer containerCustomizer() {
+        return (container -> {
+            container.setContextPath("");
+            if (System.getenv("PORT") != null) {
+                container.setPort(Integer.valueOf(System.getenv("PORT")));
 
+            }
+        });
+    }
 }
