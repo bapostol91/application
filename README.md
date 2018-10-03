@@ -12,4 +12,4 @@ And the war file would be created in application-server/target directory
 
 
 #To deploy in heroku:
-There is a special Profile which contains all the necessary information to deploy it
+There is a Procfile configuration file which contains all the necessary information to deploy it.(specific to heroku)
