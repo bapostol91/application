@@ -8,6 +8,7 @@ import state from "./State";
 
 registerServiceWorker();
 const getNextApp = () => require('./Mobila/App').default;
+state.initialCalls();
 
 const render = Component => {
     ReactDOM.render(
@@ -21,6 +22,7 @@ render(App);
 state.subscribe(() => {
     render(getNextApp());
 });
+
 
 if (module.hot) {
   module.hot.accept('./Mobila/App', () =>  render(getNextApp()))
