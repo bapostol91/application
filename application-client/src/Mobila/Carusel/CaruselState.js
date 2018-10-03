@@ -20,7 +20,12 @@ const onEnterRoute = () =>{
 const addRoutes = () => {
     routes.push({
         path: getRoute(),
-        component : () => CaruselPage(getImages())
+        component : () => {
+            if (getImages().length > 0 ){
+				return CaruselPage(getImages())
+            }
+            return null;
+		}
     });
 };
 

@@ -3,7 +3,6 @@ import Carusel from "./Carusel";
 import Page from "../Page/Page";
 
 export default (images) => {
-    console.log("page");
     return (
         <Page>
             <p className="col text-center">

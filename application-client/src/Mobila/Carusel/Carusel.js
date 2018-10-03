@@ -4,7 +4,7 @@ import "./Carusel.css";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export default ({images}) => (
-    <Carousel emulateTouch={true} >
+    <Carousel emulateTouch={true} infiniteLoop={true} dynamicHeight={true}>
         {images}
     </Carousel>
 )
