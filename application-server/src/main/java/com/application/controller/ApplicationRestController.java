@@ -1,6 +1,6 @@
 package com.application.controller;
 
-import com.application.dto.ApplicationDTO;
+import com.application.dto.Application;
 import com.application.service.ApplicationService;
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,7 @@ public class ApplicationRestController {
     private ApplicationService applicationService;
 
     @RequestMapping("/applications")
-    public List<ApplicationDTO> getApplications() {
+    public List<Application> getApplications() {
         LOG.info("==============> getApplications called!");
         return applicationService.getApplications();
     }
