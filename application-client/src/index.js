@@ -8,22 +8,26 @@ import state from "./State";
 
 registerServiceWorker();
 const getNextApp = () => require('./Mobila/App').default;
-state.initialCalls();
+state.initialCalls(document.location.hash);
+const createRootElement = () => {
+	let root = document.getElementById('root');
+	root.style.height="100%";
+	return root;
+};
 
 const render = Component => {
-    ReactDOM.render(
-      <Component/>,
-      document.getElementById('root')
-    );
+	ReactDOM.render(
+		<Component/>,
+		createRootElement()
+	);
 };
 
 render(App);
 
 state.subscribe(() => {
-    render(getNextApp());
+	render(getNextApp());
 });
 
-
 if (module.hot) {
-  module.hot.accept('./Mobila/App', () =>  render(getNextApp()))
+	module.hot.accept('./Mobila/App', () => render(getNextApp()))
 }

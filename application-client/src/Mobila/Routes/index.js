@@ -1,7 +1,7 @@
 let routes = [];
 
 const push = (route) =>{
-    routes.push(route);
+	routes.push(route);
 };
 
 const getRoutes = () => routes;
