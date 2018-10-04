@@ -1,3 +1,7 @@
 ul.thumbs.animated {
 	text-align: center;
 }
+
+p.legend {
+	display: none;
+}
