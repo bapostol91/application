@@ -17,7 +17,7 @@
         <org.springframework.boot.version>1.5.8.RELEASE</org.springframework.boot.version>
         <javax.servlet.version>3.0.1</javax.servlet.version>
         <org.postgresql.version>9.4.1212</org.postgresql.version>
-        <org.springframework.version>4.3.8.RELEASE</org.springframework.version>
+        <org.springframework.version>5.3.22</org.springframework.version>
     </properties>
 
     <dependencyManagement>
